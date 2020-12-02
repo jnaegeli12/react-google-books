@@ -1,0 +1,37 @@
+{
+  "name": "react-google-books",
+  "version": "1.0.0",
+  "description": "finding, sorting, and saving books from google",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "seed": "seedDB.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jnaegeli12/react-google-books.git"
+  },
+  "author": "Judy Naegeli",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/jnaegeli12/react-google-books/issues"
+  },
+  "homepage": "https://github.com/jnaegeli12/react-google-books#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.17"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "2.0.6"
+  }
+}
