@@ -6,7 +6,7 @@
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
-    "start:dev": "concurrently \"node --ignore 'client/*'\" \"npm run client\"",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
@@ -22,10 +22,9 @@
   "bugs": {
     "url": "https://github.com/jnaegeli12/react-google-books/issues"
   },
-  "homepage": "https://github.com/jnaegeli12/react-google-books#readme",
   "dependencies": {
     "axios": "^0.21.0",
-    "dotenv": "^8.2.0",
+    "if-env": "^1.0.4",
     "express": "^4.17.1",
     "mongoose": "^5.10.17"
   },
