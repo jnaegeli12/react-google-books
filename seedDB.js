@@ -2,12 +2,12 @@ const db = require("./models");
 
 const bookSeed = [
     {
-        googleId: "ZzrVDwAAQBAJ",
-        title: "The Voyage of the Dawn Treader",
-        authors: ["C.S. Lewis"],
-        description: "C. S. Lewis was a British author, lay theologian, and contemporary of J.R.R. Tolkien. The Voyage of the Dawn Treader is about a journey east across the sea from Narnia to the end of the world.",
-        image: "http://books.google.com/books/content?id=ZzrVDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-        link: "http://books.google.com/books?id=ZzrVDwAAQBAJ&dq=narnia&hl=&source=gbs_api"
+        googleId: "-9F9WaXUhRYC",
+        title: "The Night Circus",
+        authors: [ "Erin Morgenstern" ],
+        description: "Two starcrossed magicians engage in a deadly game of cunning in The Night Circus, the spellbinding New York Times best seller that has captured the world's imagination. The circus arrives without warning. No announcements precede it. It is simply there, when yesterday it was not. Within the black-and-white striped canvas tents is an utterly unique experience full of breathtaking amazements. It is called Le Cirque des Rêves, and it is only open at night. But behind the scenes, a fierce competition is underway: a duel between two young magicians, Celia and Marco, who have been trained since childhood expressly for this purpose by their mercurial instructors. Unbeknownst to them both, this is a game in which only one can be left standing. Despite the high stakes, Celia and Marco soon tumble headfirst into love, setting off a domino effect of dangerous consequences, and leaving the lives of everyone, from the performers to the patrons, hanging in the balance. Look for Erin Morgenstern's new novel, The Starless Sea, available now.",
+        image: "http://books.google.com/books/content?id=-9F9WaXUhRYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+        link: "https://play.google.com/store/books/details?id=-9F9WaXUhRYC&source=gbs_api"
     },
     {
         googleId: "aHazvhln7BsC",
@@ -18,12 +18,12 @@ const bookSeed = [
         link: "https://play.google.com/store/books/details?id=aHazvhln7BsC&source=gbs_api"
     },
     {
-        googleId: "iHy75F9qO_4C",
-        title: "Emma",
-        authors: ["Jane Austen"],
-        description: "A timeless coming-of-age story follows the adventures of the self-assured and accomplished Emma, a twenty-one-year-old girl of privilege who believes she is immune to romance and has several chaotic and often humorous experiences.",
-        image: "http://books.google.com/books/content?id=iHy75F9qO_4C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-        link: "http://books.google.com/books?id=iHy75F9qO_4C&dq=Emma&hl=&source=gbs_api"
+        googleId: "e_3cCgAAQBAJ",
+        title: "Stamped from the Beginning",
+        authors: [ "Ibram X. Kendi" ], 
+        description: "The National Book Award winning history of how racist ideas were created, spread, and deeply rooted in American society. Some Americans insist that we're living in a post-racial society. But racist thought is not just alive and well in America -- it is more sophisticated and more insidious than ever. And as award-winning historian Ibram X. Kendi argues, racist ideas have a long and lingering history, one in which nearly every great American thinker is complicit. In this deeply researched and fast-moving narrative, Kendi chronicles the entire story of anti-black racist ideas and their staggering power over the course of American history. He uses the life stories of five major American intellectuals to drive this history: Puritan minister Cotton Mather, Thomas Jefferson, abolitionist William Lloyd Garrison, W.E.B. Du Bois, and legendary activist Angela Davis. As Kendi shows, racist ideas did not arise from ignorance or hatred. They were created to justify and rationalize deeply entrenched discriminatory policies and the nation's racial inequities. In shedding light on this history, Stamped from the Beginning offers us the tools we need to expose racist thinking. In the process, he gives us reason to hope.",
+        image: "http://books.google.com/books/content?id=e_3cCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+        link: "https://play.google.com/store/books/details?id=e_3cCgAAQBAJ&source=gbs_api"
     }
 ]
 
