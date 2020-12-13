@@ -3,12 +3,15 @@ import SearchBar from "../components/SearchBar";
 import ResultsContainer from "../components/ResultsContainer";
 import API from '../utils/API';
 import ResultsCard from "../components/ResultsCard";
-import Button from '../components/Button';
 
 class Search extends Component {
   state = {
     books: [],
     query: ""
+  }
+
+  refreshResults = () => {
+    window.location.reload(false)
   }
 
   handleInputChange = event => {
@@ -23,9 +26,10 @@ class Search extends Component {
     API.searchGoogle(this.state.query)
       .then(res => 
         this.setState({
-          books: res.data.items
+          books: res.data.items,
+          query: ""
         })
-      )
+      );
   };
 
   handleAddFavorite = id => {
@@ -38,7 +42,9 @@ class Search extends Component {
       authors: book.volumeInfo.authors,
       description: book.volumeInfo.description,
       image: book.volumeInfo.imageLinks.thumbnail,
-    })
+    }).then(
+      this.refreshResults()
+    )
   };
 
   render() {
@@ -57,13 +63,14 @@ class Search extends Component {
             {this.state.books.map(book => (
               <div>
                 <ResultsCard
-                  googleId={book.id} 
+                  id={book._id}
+                  googleId={book.id}
                   image={book.volumeInfo.imageLinks.thumbnail}
                   title={book.volumeInfo.title}
-                  authors={book.volumeInfo.authors.join(', ')}
+                  authors={book.volumeInfo.authors.join(", ")}
                   description={book.volumeInfo.description}
-                  link={book.volumeInfo.infoLink} />
-                <Button 
+                  link={book.volumeInfo.infoLink}
+                  value="Add to Favorites"
                   onClick={() => this.handleAddFavorite(book.id)} />
               </div>
             ))}

@@ -7,14 +7,13 @@ const API = {
     },
     getFavorites: function() {
         console.log("this is the API");
-        return axios.get('/api/books/');
+        return axios.get('/api/books');
     },
     addtoFavorites: function(postData) {
-        console.log(postData);
         return axios.post('api/books', postData);
     },
     removeFavorites: function(id) {
-        return axios.delete('api/books', id);
+        return axios.delete('api/books/' + id);
     }
 }
 

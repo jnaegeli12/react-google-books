@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const routes = require('./routes');
+const path = require("path");
+const routes = require('./routes/index');
 const mongoose = require("mongoose");
 const PORT = process.env.PORT || 3001;
 
@@ -18,10 +19,8 @@ if (process.env.NODE_ENV === "production") {
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/googlebooks',
   {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
     useCreateIndex: true,
-    useFindAndModify: false
+    useNewUrlParser: true
   }
 );
 
