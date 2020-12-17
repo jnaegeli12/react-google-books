@@ -3,6 +3,7 @@ import React from 'react';
 function SearchBar(props) {
     return (
         <form className="form-inline center">
+            {/* <i class="fas fa-book-open"></i> */}
             <input 
                 onChange={props.handleInputChange}
                 value={props.query}

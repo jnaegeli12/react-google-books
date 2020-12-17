@@ -7,6 +7,7 @@ body {
 h1 {
     font-family: 'Varela', sans-serif;
     font-size: 40px;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -29,6 +30,10 @@ img {
     float: left;
     padding-bottom: 15px;
     padding-right: 15px;
+}
+
+nav {
+    background-color: #ea4335;
 }
 
 .card {
