@@ -7,7 +7,8 @@ import ResultsCard from "../components/ResultsCard";
 class Search extends Component {
   state = {
     books: [],
-    query: ""
+    query: "",
+    message: "Search For A Book To Begin!"
   }
 
   refreshResults = () => {
@@ -27,9 +28,16 @@ class Search extends Component {
       .then(res => 
         this.setState({
           books: res.data.items,
-          query: ""
+          query: "",
+          message: ""
         })
-      );
+      ).catch(() => {
+        this.setState({
+          books: [],
+          query: "",
+          message: "No book found"
+        })
+      })
   };
 
   handleAddFavorite = id => {
@@ -57,7 +65,8 @@ class Search extends Component {
           <SearchBar
             handleInputChange={this.handleInputChange}
             handleFormSubmit={this.handleFormSubmit}
-            query={this.state.query} />
+            query={this.state.query}
+            message={this.state.message} />
         </div>
         <ResultsContainer>
             {this.state.books.map(book => (
@@ -67,7 +76,7 @@ class Search extends Component {
                   googleId={book.id}
                   image={book.volumeInfo.imageLinks.thumbnail}
                   title={book.volumeInfo.title}
-                  authors={book.volumeInfo.authors.join(", ")}
+                  authors={book.volumeInfo.authors}
                   description={book.volumeInfo.description}
                   link={book.volumeInfo.infoLink}
                   value="Add to Favorites"

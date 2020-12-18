@@ -6,7 +6,6 @@ const API = {
         return axios.get(queryString);
     },
     getFavorites: function() {
-        console.log("this is the API");
         return axios.get('/api/books');
     },
     addtoFavorites: function(postData) {
